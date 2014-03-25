@@ -441,7 +441,7 @@ void mueller_pol(int L,int s)
     fft_reset();
 }
 
-int main(int argc,char **argv)
+extern "C" int modpol_main(int argc,char **argv)
 {
     Big p;
     miracl *mip=get_mip();

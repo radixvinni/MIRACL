@@ -657,7 +657,7 @@ int phi(int n)
     return r;
 }
 
-int main(int argc,char **argv)
+extern "C" int sea_main(int argc,char **argv)
 {
     ofstream ofile;
     ifstream mueller;

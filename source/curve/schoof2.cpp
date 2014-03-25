@@ -467,7 +467,7 @@ int qpow(int x,int y)
     return r;
 }
 
-int main(int argc,char **argv)
+extern "C" int schoof2_main(int argc,char **argv)
 {
     ofstream ofile;
     int TR,M,a,b,c,low,lower,ip,lp,i,j,jj,m,n,nl,L,k,tau,lambda,cf;

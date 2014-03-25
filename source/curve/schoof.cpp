@@ -680,7 +680,7 @@ mr_utype qpow(mr_utype x,int y)
     return r;
 }
 
-int main(int argc,char **argv)
+extern "C" int schoof_main(int argc,char **argv)
 {
     ofstream ofile;
     int low,lower,ip,pbits,lp,i,j,jj,m,n,nl,L,k,tau,lambda;

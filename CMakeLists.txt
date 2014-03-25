@@ -103,18 +103,20 @@ endif (MSVC)
 add_library (Miracl ${MIRACL})
 
 
-add_executable (sea.exe ${SEA})
-target_link_libraries(sea.exe Miracl)
+add_library (sea SHARED ${SEA})
+target_link_libraries(sea Miracl)
 
-add_executable (modpol.exe ${MODPOL})
-target_link_libraries(modpol.exe Miracl)
+add_library (modpol SHARED ${MODPOL})
+target_link_libraries(modpol Miracl)
 
-add_executable (schoof.exe ${SCHOOF})
-target_link_libraries(schoof.exe Miracl)
+add_library (schoof SHARED ${SCHOOF})
+target_link_libraries(schoof Miracl)
 
-add_executable (schoof2.exe ${SCHOOF2})
-target_link_libraries(schoof2.exe Miracl)
+add_library (schoof2 SHARED ${SCHOOF2})
+target_link_libraries(schoof2 Miracl)
 
+add_executable (test.exe test/test.cpp)
+target_link_libraries(test.exe dl)
 
 # install (FILES ${HEADERS} DESTINATION include)
-install (TARGETS Miracl DESTINATION lib)
+install (TARGETS Miracl sea modpol schoof schoof2 DESTINATION lib)
