@@ -1,3 +1,15 @@
+About this fork
+===============
+
+This fork adds CMake build script for MIRACL library. The script builds and installs following elliptic curve programs as shared libraries:
+
+* sea as libsea.so
+* schoof as libschoof.so
+* schoof2 as libschoof2.so
+* modpol as libmodpol.so
+
+Each shared library contains all required library code and exports one symbol each. For example: void sea_main(int argc, char** argv) for libsea.so and so on.
+
 MIRACL
 ======
 What is MIRACL?
