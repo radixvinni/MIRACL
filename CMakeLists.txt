@@ -88,12 +88,12 @@ set (MIRACL
 	source/mrzzn2b.c
 	source/mrzzn3.c
 )
-configure_file(source/mrmuldv.ccc source/mrmuldv.c)
+configure_file(source/mrmuldv.ccc ../miracl/source/mrmuldv.c)
 if (MSVC)
-	configure_file(include/mirdef.ccc include/mirdef.h)
+	configure_file(include/mirdef.ccc ../miracl/include/mirdef.h)
   add_definitions (/W0)
 elseif (CMAKE_COMPILER_IS_GNUCXX)
- 	configure_file(include/mirdef.lnx include/mirdef.h)
+ 	configure_file(include/mirdef.lnx ../miracl/include/mirdef.h)
 if(CMAKE_SIZEOF_VOID_P EQUAL 8)
   add_definitions (-w -fPIC)
 else()
